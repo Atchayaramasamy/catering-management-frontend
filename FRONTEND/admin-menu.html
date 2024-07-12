@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Menu - Catering System</title>
+    <link rel="stylesheet" href="admin-menu.css">
+</head>
+<body>
+    <header>
+        <h1>Admin Menu</h1>
+        <button id="logoutBtn">Logout</button>
+    </header>
+    <main>
+        <section id="foodItems">
+            <h2>Food Items</h2>
+            <table id="foodList">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Price ($)</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Food items will be dynamically added here -->
+                </tbody>
+            </table>
+            <form id="addFoodForm">
+                <input type="text" id="foodName" placeholder="Food Name" required>
+                <input type="number" id="foodPrice" placeholder="Price" step="0.01" required>
+                <button type="submit">Add Food</button>
+            </form>
+        </section>
+        <!-- Other sections for managing users, orders, etc. -->
+    </main>
+    <script src="admin-menu.js"></script>
+</body>
+</html>

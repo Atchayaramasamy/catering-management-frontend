@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Menu - Catering System</title>
+    <link rel="stylesheet" href="customer-menu.css">
+</head>
+<body>
+    <header>
+        <h1>Customer Menu</h1>
+        <button id="logoutBtn">Logout</button>
+    </header>
+    <main>
+        <section id="menuItems">
+            <h2>Available Food Items</h2>
+            <table id="menuList">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Price ($)</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Menu items will be dynamically added here -->
+                </tbody>
+            </table>
+        </section>
+        <section id="cart">
+            <h2>Your Cart</h2>
+            <table id="cartList">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Quantity</th>
+                        <th>Price ($)</th>
+                        <th>Total ($)</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Cart items will be dynamically added here -->
+                </tbody>
+            </table>
+            <button id="confirmOrderBtn">Confirm Order</button>
+        </section>
+        <section id="orderDetails" class="hidden">
+            <h2>Delivery Details</h2>
+            <form id="orderForm">
+                <label for="deliveryDate">Delivery Date:</label>
+                <input type="date" id="deliveryDate" name="deliveryDate" required>
+                <label for="deliveryLocation">Delivery Location:</label>
+                <input type="text" id="deliveryLocation" name="deliveryLocation" required>
+                <button type="submit">Place Order</button>
+            </form>
+        </section>
+        <section id="bill" class="hidden">
+            <h2>Order Summary - Bill</h2>
+            <div id="billDetails">
+                <!-- Bill details will be dynamically added here -->
+            </div>
+        </section>
+        <div id="errorMessage" class="error-message"></div>  <!-- Ensure this element exists in your HTML -->
+    </main>
+    <script src="customer-menu.js"></script>
+</body>
+</html>
